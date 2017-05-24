@@ -36,4 +36,4 @@ local img = loadAndResizeImage(imagePath)
 local text, raw = recognizeImageLexiconFree(model, img)
 
 -- store results to temporary text file so mc-runCRNN.py can read --
-print('text' .. '\t' .. 'raw')
+print(text .. '\t' .. raw)

@@ -18,8 +18,8 @@ for line in data: # each line is pk, image_url
     print "running on " + image_url
     
     result = subprocess.check_output(['th', 'mc-lexiconFree.lua'])
-    #result="text1\traw\n"
     #
+    print result
     pk = pk # silly
     method = 'crnn-lexiconFree'
     text = result.split('\t')[0]

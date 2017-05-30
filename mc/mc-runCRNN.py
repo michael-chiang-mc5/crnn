@@ -16,6 +16,6 @@ with open('output.txt', 'r') as f:
         method = elements[1]
         text = elements[2]
         notes = elements[3]
-        payload = {'pk':pk, 'method':method, 'text':text, 'notes':raw }
+        payload = {'pk':pk, 'method':method, 'text':text, 'notes':notes }
         post_url = interface_url + "ImagePicker/postOCR/"
         r = requests.post(post_url, data={'json-str':json.dumps(payload)})

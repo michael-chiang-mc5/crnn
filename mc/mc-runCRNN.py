@@ -11,6 +11,7 @@ subprocess.check_output(['th', 'mc-lexiconFree.lua'])
 with open('output.txt', 'r') as f:
     reader = csv.reader(f)
     for row in reader:
+        print(row)
         elements = row[0].split('\t')
         pk = elements[0]
         method = elements[1]

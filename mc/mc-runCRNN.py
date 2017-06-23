@@ -14,9 +14,10 @@ with open('output.txt', 'r') as f:
         print(row)
         elements = row[0].split('\t')
         pk = elements[0]
-        method = elements[1]
+        method = elements[1] # should be  crnn-lexiconFree
         text = elements[2]
         notes = elements[3]
-        payload = {'pk':pk, 'method':method, 'text':text, 'notes':notes }
+        payload = {'pk':pk, 'method':method, 'text':text, 'notes':notes, 'locale':'', 'score':0 }
         post_url = interface_url + "ImagePicker/postOCR/"
         r = requests.post(post_url, data={'json-str':json.dumps(payload)})
+        print(r.text)
